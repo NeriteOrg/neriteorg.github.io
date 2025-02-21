@@ -2,87 +2,14 @@
 sidebar_position: 2
 ---
 
-# Friendly Fork Program
+# Liquity Friendly Fork Program
 
-Let's translate `docs/intro.md` to French.
+While extending Liquity’s base protocol, we did not do it in the dark or in secret. Nerite was built in the open for everyone to see and with permission from the Liquity team. We are a “Friendly Fork” and chose to pay a small license fee to them and have been granted the exclusive right to use Liquity's code on Arbitrum. In return Nerite received enormous help directly from the Liquity team: 
 
-## Configure i18n
+- They gave us lots of technical support from incredible engineers like Colin Platt.
+- They shared their audit reports with us early which allowed us to improve the security of our protocol faster.
+- They helped us connect and partner with LP networks like the Defi Collective.
 
-Modify `docusaurus.config.js` to add support for the `fr` locale:
+When Liquity wins, Nerite wins. When Nerite wins, Liquity wins. 
 
-```js title="docusaurus.config.js"
-export default {
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-  },
-};
-```
-
-## Translate a doc
-
-Copy the `docs/intro.md` file to the `i18n/fr` folder:
-
-```bash
-mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
-
-cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
-```
-
-Translate `i18n/fr/docusaurus-plugin-content-docs/current/intro.md` in French.
-
-## Start your localized site
-
-Start your site on the French locale:
-
-```bash
-npm run start -- --locale fr
-```
-
-Your localized site is accessible at [http://localhost:3000/fr/](http://localhost:3000/fr/) and the `Getting Started` page is translated.
-
-:::caution
-
-In development, you can only use one locale at a time.
-
-:::
-
-## Add a Locale Dropdown
-
-To navigate seamlessly across languages, add a locale dropdown.
-
-Modify the `docusaurus.config.js` file:
-
-```js title="docusaurus.config.js"
-export default {
-  themeConfig: {
-    navbar: {
-      items: [
-        // highlight-start
-        {
-          type: 'localeDropdown',
-        },
-        // highlight-end
-      ],
-    },
-  },
-};
-```
-
-The locale dropdown now appears in your navbar:
-
-![Locale Dropdown](./img/localeDropdown.png)
-
-## Build your localized site
-
-Build your site for a specific locale:
-
-```bash
-npm run build -- --locale fr
-```
-
-Or build your site to include all the locales at once:
-
-```bash
-npm run build
-```
+Learn more about our BOLD Incentive Program here: https://www.nerite.org/writing/bold-incentive-program
