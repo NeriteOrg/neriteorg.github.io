@@ -28,20 +28,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
+          cache: 'yarn'
 
       - name: Install dependencies
-        run: npm ci
+        run: npx yarn install
 
-      - name: Build
-        run: npm run build
-
-      - name: Deploy
+      - name: Build and Deploy
         run: |
-          echo "Deploying to ${{ github.event.inputs.environment }}"
-          # Add your deployment commands here
-          # For example:
-          # - Upload to S3
-          # - Deploy to Vercel
-          # - Deploy to Netlify
-          # etc. 
+          npx yarn build
+          GIT_USER=cupOJoseph npx yarn deploy 
