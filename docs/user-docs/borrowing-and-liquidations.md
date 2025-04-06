@@ -36,6 +36,7 @@ Nerite works with the following ten collaterals:
 
 :::tip
 New collateral types can never be added. But existing ones can be removed, or re-added, based on risk factors.
+:::
 
 ### Is there a minimum debt?
 
@@ -55,6 +56,7 @@ This depends on your personal preferences, primarily your risk tolerance and how
 
 :::tip
 We may display BOLD instead of USDN in several graphics which are borrowed from Liquity.
+:::
 
 <figure><img src="/static/img/ltv_preset.png" alt=""></img><figcaption><p>LTV quick-selection options</p></figcaption></figure>
 

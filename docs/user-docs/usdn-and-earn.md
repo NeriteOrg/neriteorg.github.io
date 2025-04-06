@@ -87,3 +87,4 @@ It is important to note that all USDN holders including depositors still remain 
 
 :::tip
 A Stability Pool aggregation vault is currently under development, to simplify this.
+:::
