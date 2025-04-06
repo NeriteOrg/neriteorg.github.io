@@ -6,6 +6,7 @@ sidebar_position: 5
 
 :::warning
 **NERI token is not yet live or available. Be very diligent of scams. Go slow.** 
+:::
 
 Guide to staking NERI tokens and participating in governance.
 
