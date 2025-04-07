@@ -2,41 +2,45 @@
 sidebar_position: 1
 ---
 
+
 # General
 
-What is Nerite?
+### What is Nerite?
 Nerite is a decentralized borrowing protocol that lets users deposit ETH, LSTs, and ARB as collateral, and mint the stablecoin USDN at an interest rate depositors choose. Nerite is based on Liquity v2.
 
-There are several main use-cases:
+### The main use-cases for Nerite are:
 
 - Borrow USDN
-- 1-click multiply expore to collateral assets
+- 1-click multiply exposure to collateral assets
 - Earn yield by depositing USDN in the stability pool or farming elsewhere
-- Stake NERI to direct PIL and earn rewards
+- Stake NERI to direct PLI (Protocol Liquidity Incentives) and earn rewards
 - Stream USDN as a subscription, salary, grant, or any other kind of payment
 
-What are the differences to Liquity V1?
-Some things stay the same:
+To understand Nerite it's helpful to understand [Liquity](https://www.liquity.org) 
 
-- Immutability
-- Decentralization
-- Rigorous security
-- Redemption of stablecoins for underlying collateral maintains the $1.00 peg no matter what
+> Liquity V1 was an immutable lending protocol that allowed users to take 0% interest loans on their ETH to receive $LUSD. Over the past 4 years it proved itself resilient in a variety of market conditions over the past 4 years. 
+> 
+> Liquity V2 is the next iteration of borrowing, allowing users to set their own interest rate, and use more tokens as collateral.
 
-However, Nerite is innovating on multiple fronts:
 
-- User-set interest rates – more control over your borrowing cost.
-- New collateral types - ETH, LSTs, and ARB
-- Improved redemption mechanism (lowest borrowing rate is redeemed first, always increasing yield of USDN)
-- Troves are now transferable
-- Improved capital efficiency
-- USDN is now a streamable super-token built with [Superfluid](https://www.superfluid.finance/).
+### Liquity V1 vs Liquity V2
+| Similarities | Differences  |
+|--|--|
+|Immutability  |  User-set interest rates – more control over your borrowing cost. |
+|Decentralized| New collateral types - ETH, rETH, wstETH|
+|Rigorous Security|Improved redemption mechanism (lowest borrowing rate is redeemed first)|
+|Redemption of stablecoins for underlying collateral maintains the $1.00 peg no matter what| Troves are now transferable|
+|ETH Mainnet Only|V1’s code was free and open-sourced (FOSS), while with V2, Liquity will have its code set as a business source license (BUSL)|
 
-What other differences are there between Liquity V2 and Nerite?
-- Additional collateral types. Nerite supports: ETH, rETH, wstETH, sfrxETH, weETH, pufETH, tETH, tBTC, COMP, and ARB (all on the Arbitrum network).
-- Streaming: USDN can be streamed at any rate using [Superfluid](https://www.superfluid.finance/). Pay anyone every second.
-- ARB deposited in the protocol can be delegated by Nerite governance.
-- Additional security features to allow for the other features, like debt limits.
+### Nerite Vs Liquity V2
+| Similarities | Differences  |
+|--|--|
+| Immutability|ETH Mainnet (Liquity V2) only vs Arbitrum Only (Nerite) |
+|Decentralization| **Additional Collateral:** sfrxETH, weETH, pufETH, tETH, tBTC, COMP, and ARB|
+|Redemption of stablecoins for underlying collateral maintains the $1.00 peg no matter what| Nerite adds Streaming: USDN can be streamed at any rate using  [Superfluid](https://www.superfluid.finance/). Pay anyone every second.|
+|Shared Security from Friendly Forks |ARB deposited in the protocol can be delegated by Nerite governance.|
+||Nerite adds Additional security features to allow for the other features, like debt limits|
+|||\
 
-Does Nerite have governance?
+## Does Nerite have governance?
 Nerite is subject to minimal governance which is solely tasked with distributing Protocol Liquidity Incentives (PIL), directing 25% of the protocol's revenue to external initiatives, delegating ARB, and updating collateral debt limits.
