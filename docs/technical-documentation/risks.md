@@ -25,7 +25,7 @@ Nerite Protocol is designed to be as decentralized and immutable as possible. Th
 2. Where to direct 25% of protocol fees. 
 
 New collateral types can NOT be added by Nerite governance. 
-USDN can NEVER be minted by Nerite governance.
+NUSD can NEVER be minted by Nerite governance.
 The percentage of fees that are directed to the stability pool can NOT be changed by Nerite governance.
 
 ### Arbitrum Network

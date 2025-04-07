@@ -6,11 +6,11 @@ sidebar_position: 4
 
 ### What are redemptions?
 
-Redemptions serve the crucial purpose of keeping USDN pegged to the value of a dollar, creating a price floor around $0.9945. They do this in a decentralized way without reliance on centralized assets, oracles, or 3rd parties.
+Redemptions serve the crucial purpose of keeping NUSD pegged to the value of a dollar, creating a price floor around $0.9945. They do this in a decentralized way without reliance on centralized assets, oracles, or 3rd parties.
 
-A redemption is essentially swapping USDN for ETH/LST at face value, as if 1 USDN is exactly worth $1.00. Redemptions can be initiated by anyone, but are only profitable when USDN is less than $1.
+A redemption is essentially swapping NUSD for ETH/LST at face value, as if 1 NUSD is exactly worth $1.00. Redemptions can be initiated by anyone, but are only profitable when NUSD is less than $1.
 
-The redeemer sends USDN to the protocol and in return  gets a mix of WETH, wstETH and rETH (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](#how-is-the-collateral-split-determined) for more info).
+The redeemer sends NUSD to the protocol and in return  gets a mix of WETH, wstETH and rETH (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](#how-is-the-collateral-split-determined) for more info).
 
 <figure>
   <img src="/static/img/light - BOLD individual redemption.png" alt="" />
@@ -29,11 +29,11 @@ In this case, the "Last In, First Out" (LIFO) principle applies, meaning the Tro
 
 ### When can redemptions occur? <a href="#docs-internal-guid-85409cf3-7fff-2712-b20f-92b229718cbb" id="docs-internal-guid-85409cf3-7fff-2712-b20f-92b229718cbb"></a>
 
-A redemption can occur at any time, but will likely only happen when it is profitable to do so. This is usually the case when the price of USDN is less than $1 (minus the current redemption fee).
+A redemption can occur at any time, but will likely only happen when it is profitable to do so. This is usually the case when the price of NUSD is less than $1 (minus the current redemption fee).
 
 ### Who can initiate a redemption? <a href="#docs-internal-guid-595b4008-7fff-7d35-9a38-68d9e7feef1a" id="docs-internal-guid-595b4008-7fff-7d35-9a38-68d9e7feef1a"></a>
 
-Any Ethereum address can initiate a redemption, provided that they have a sufficient amount of USDN to do so. However, we expect redemptions to be mainly performed by professional bots rather than humans.
+Any Ethereum address can initiate a redemption, provided that they have a sufficient amount of NUSD to do so. However, we expect redemptions to be mainly performed by professional bots rather than humans.
 
 ### What happens if my Trove gets redeemed?
 
@@ -43,18 +43,18 @@ If your collateral (ETH or LST) is redeemed, an equivalent amount of your debt i
 
 Example with ETH at $3'000:
 
-* Before the redemption: 10 ETH collateral, 20'000 USDN debt.
-* After the redemption: 5.025 ETH collateral, 5'000 USDN debt.
+* Before the redemption: 10 ETH collateral, 20'000 NUSD debt.
+* After the redemption: 5.025 ETH collateral, 5'000 NUSD debt.
 
 You can see your collateral and debt reduced equally (in USD terms) and the redemption fee (0.025 ETH) being added to your collateral value.
 
-Partially affected Troves whose debt stays above the minimum debt threshold of 2000 USDN continue to work as before, while Troves whose debt is reduced to a lesser amount (or 0) switch to a dormant operating mode (see below for [more](#what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount) info).
+Partially affected Troves whose debt stays above the minimum debt threshold of 2000 NUSD continue to work as before, while Troves whose debt is reduced to a lesser amount (or 0) switch to a dormant operating mode (see below for [more](#what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount) info).
 
 ### How do redemptions work using three collateral assets? <a href="#docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a" id="docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a"></a>
 
-In contrast to LUSD, USDN is backed by a multitude of collaterals. Instead of letting the redeemer freely choose the collateral to redeem, Liquity V2 optimizes the process for economic safety. Redemptions are thus serviced through a collateral mix in a way that enhances the overall backing of USDN.
+In contrast to LUSD, NUSD is backed by a multitude of collaterals. Instead of letting the redeemer freely choose the collateral to redeem, Liquity V2 optimizes the process for economic safety. Redemptions are thus serviced through a collateral mix in a way that enhances the overall backing of NUSD.
 
-The process starts with the Troves paying the lowest interest rates in each collateral market and continues until the full amount of USDN is exchanged for collateral assets. Redemptions can be partial or full, as illustrated below.
+The process starts with the Troves paying the lowest interest rates in each collateral market and continues until the full amount of NUSD is exchanged for collateral assets. Redemptions can be partial or full, as illustrated below.
 
 In this example, the rETH market shows a full redemption of the first Trove and a partial redemption of the second. The wstETH and ETH markets have one partial and two full redemptions, respectively
 
@@ -66,7 +66,7 @@ The split is dynamic, optimizing for the economic safety of the system. The logi
 
 To mitigate this risk, the system redeems proportionally to the "outside debt" of each collateral type. This is calculated as the total debt borrowed against a specific collateral minus the size of the Stability Pool for that borrowing market.
 
-Here is an example: given outside debt amounts of 100 USDN, 50 USDN and 100 USDN respectively, a redemption will result in a 40% (WETH), 20% (wstETH) and 40% (rETH) split.
+Here is an example: given outside debt amounts of 100 NUSD, 50 NUSD and 100 NUSD respectively, a redemption will result in a 40% (WETH), 20% (wstETH) and 40% (rETH) split.
 
 
 
@@ -78,7 +78,7 @@ Yes. The redemption fee mechanics are broadly the same as in Liquity V1, but wit
 
 Redemption fees are based on the `baseRate` state variable, which is dynamically updated. The `baseRate` increases with each redemption, and exponentially decays according to time passed since the last redemption (half-life of 6 hours).
 
-Upon each redemption of x USDN: `baseRate` is decayed based on time passed since the last fee event and incremented by an amount proportional to the fraction of the total USDN supply to be redeemed, i.e. `x/total_bold_supply`
+Upon each redemption of x NUSD: `baseRate` is decayed based on time passed since the last fee event and incremented by an amount proportional to the fraction of the total NUSD supply to be redeemed, i.e. `x/total_bold_supply`
 
 The redemption fee percentage is given by `min (0.5%  + baseRate, 100%)`.
 
@@ -86,19 +86,19 @@ The redemption fee percentage is given by `min (0.5%  + baseRate, 100%)`.
 
 ### How can I stay protected?
 
-The risk of redemption depends on two factors: the interest rate you set and the price of USDN.
+The risk of redemption depends on two factors: the interest rate you set and the price of NUSD.
 
-**The interest rate** you set determines how much USDN must be redeemed before it's your turn.  The higher your rate, the more USDN is redeemable before you, and vice versa.
+**The interest rate** you set determines how much NUSD must be redeemed before it's your turn.  The higher your rate, the more NUSD is redeemable before you, and vice versa.
 
 You can see this on any frontned, in the example below the number is 41M.
 
 <figure><img src="/static/img/assets/rerwere.png" alt=""></img><figcaption></figcaption></figure>
 
-This means that 41M USDN must be removed from the system before it would reach you. However, this number is relative, and you also need to consider recent redemption activity. While past events don't guarantee future outcomes, they can serve as a useful guide.
+This means that 41M NUSD must be removed from the system before it would reach you. However, this number is relative, and you also need to consider recent redemption activity. While past events don't guarantee future outcomes, they can serve as a useful guide.
 
-For example, if only 200K USDN were redeemed in the last week, you're comparatively safer than if 15M were redeemed. 
+For example, if only 200K NUSD were redeemed in the last week, you're comparatively safer than if 15M were redeemed. 
 
-**The price of USDN** is the second crucial factor. When it trades above $1, redemptions become unprofitable and should cease. If demand for USDN is strong, it could maintain a price above $1 for an extended period.
+**The price of NUSD** is the second crucial factor. When it trades above $1, redemptions become unprofitable and should cease. If demand for NUSD is strong, it could maintain a price above $1 for an extended period.
 
 During such times, you can comfortably reduce the interest rate you're paying without increasing your risk of redemption.
 
@@ -134,7 +134,7 @@ Your Trove would not be affected - the only thing would get affected is the inte
 
 ### Why are redemptions not a feature of both LTV & interest rate, but only interest rate? 
 
-Given that the _raison d'etre_ for redemptions is to diminish USDN supply in response to reduced demand, and interest rates drive demand, rate-based redemption processing is a more sustainable and effective lever to reach market equilibrium. Actively managing for both interest rate and LTV would weaken the ability to enforce market-level interest rates and deposit yields, while complicating the process for the system and its users
+Given that the _raison d'etre_ for redemptions is to diminish NUSD supply in response to reduced demand, and interest rates drive demand, rate-based redemption processing is a more sustainable and effective lever to reach market equilibrium. Actively managing for both interest rate and LTV would weaken the ability to enforce market-level interest rates and deposit yields, while complicating the process for the system and its users
 
 ### What's the difference in redemption fees charged between Liquity V1 and V2? 
 In v2, when borrowers are affected by redemptions, the redemption fee charged to the redeemer stays within the affected Troves instead of being diverted as in Liquity.
@@ -143,27 +143,27 @@ So, in Liquity the `borrower_loss = redemption_fee + redeemer_gain`, while in Bo
 
 ### What happens when redemptions cause a debt of a Trove to fall below the minimum amount?
 
-If the redeemed amount exceeds the debt of an affected Trove, it doesn't get closed as in Liquity V1, but remains open with 0 USDN debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow anew to bring its debt above the minimum of 2000 USDN, topping up its collateral if needed.
+If the redeemed amount exceeds the debt of an affected Trove, it doesn't get closed as in Liquity V1, but remains open with 0 NUSD debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow anew to bring its debt above the minimum of 2000 NUSD, topping up its collateral if needed.
 
-In the scenario that the redeemed amount of a Trove does not exceed the debt of a Trove, but would leave it between 0 and 2000 USDN, the Trove would remain open with the remaining debt, and the remaining collateral. The owner of the Trove may close it by paying off the remaining debt and withdrawing the remaining collateral, or borrow anew as described above.
+In the scenario that the redeemed amount of a Trove does not exceed the debt of a Trove, but would leave it between 0 and 2000 NUSD, the Trove would remain open with the remaining debt, and the remaining collateral. The owner of the Trove may close it by paying off the remaining debt and withdrawing the remaining collateral, or borrow anew as described above.
 
-### How to redeem USDN for collateral (mix of ETH, rETH and wstETH) using Etherscan
+### How to redeem NUSD for collateral (mix of ETH, rETH and wstETH) using Etherscan
 
 **Step 1**
 
-To redeem USDN you first have to give the CollateralRegistry contract an approval to use your USDN using the approve() function of the USDN token contract.
+To redeem NUSD you first have to give the CollateralRegistry contract an approval to use your NUSD using the approve() function of the NUSD token contract.
 
 After connecting your wallet through "Connect to Web3", set\
 spender to `CollateralRegistry address`and the amount to be at least as high as the amount you wish to redeem, adding 18 zeros.
 
-**Example for 1000 USDN:**
+**Example for 1000 NUSD:**
 
 <figure><img src="/static/img/assets/red1.png" alt=""></img><figcaption></figcaption></figure>
 
 **Step 2**\
-You can now redeem USDN using the `CollateralRegistry` contract:
+You can now redeem NUSD using the `CollateralRegistry` contract:
 
-[(insert CollateralRegistry address after deployment)](#)Simply input the USDN amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
+[(insert CollateralRegistry address after deployment)](#)Simply input the NUSD amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
 
 Note: The redemption fee must be higher than the current fee.
 
