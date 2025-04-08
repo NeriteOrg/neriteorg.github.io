@@ -12,9 +12,31 @@ All of this makes for a highly capital efficient, secure and decentralized borro
 
 ### What is a Trove?
 
-A Trove is Nerite's version of a 'vault'. Each Trove has a particular Ethereum address owner, and each owner can have multiple Troves.
+When a borrower deposits collateral (ETH, rETH, ARB, etc) a Trove is created.
+A **Trove** is Nerite's version of a 'vault'. Each Trove has a particular Ethereum address owner, and each owner can have multiple Troves.
 
 Each Trove can only have 1 type of collateral deposited in it.
+```mermaid
+flowchart  LR
+
+A["User"]  -- Deposit ETH -->  B("Create Trove")
+
+B  -->  C("Set Rate, Collateral, and Debt value")
+
+C  -- Delegate -->  D("Manager")
+
+A  -- Deposit rETH -->  E("Create Trove")
+
+F("Set Rate, Collateral, and Debt value")  -- Delegate -->  G("Manager")
+
+E  -->  F
+
+n2["Set Rate, Collateral, and Debt value"]  -- Delegate -->  n3["Manager"]
+
+n1["Create Trove"]  -->  n2
+
+A  --Deposit ARB-->  n1
+```
 
 Each Trove allows you to manage a loan, adjusting collateral and debt values as needed, as well as setting your own interest rate. Trove management can optionally be delegated to a "Manager" who is given special permissions. 
 
@@ -34,8 +56,9 @@ Nerite works with the following ten collaterals:
 - COMP (Compound Finance)
 - tBTC (Threshold Bitcoin)
 
-:::tip
-New collateral types can never be added. But existing ones can be removed, or re-added, based on risk factors.
+::: tip
+New collateral types can never be added. But existing ones can
+be removed, or re-added, based on risk factors. 
 :::
 
 ### Is there a minimum debt?
@@ -48,7 +71,8 @@ Loans issued by the protocol do not have a repayment schedule. You can leave you
 
 ### Is there a lockup period? 
 
-There is no lockup period. Users are free to withdraw their collateral deposits whenever they want. As an exception, withdrawals by borrowers are temporarily suspended if the total LTV of a borrow market goes above 75%.
+There is no lockup period. Users are free to withdraw their collateral deposits whenever they want. 
+As an exception, withdrawals by borrowers are temporarily suspended if the total LTV of a borrow market goes above 75%.
 
 ### How do I decide on my LTV?
 
@@ -58,17 +82,17 @@ This depends on your personal preferences, primarily your risk tolerance and how
 We may display BOLD instead of USDN in several graphics which are borrowed from Liquity.
 :::
 
-<figure><img src="/static/img/ltv_preset.png" alt=""></img><figcaption><p>LTV quick-selection options</p></figcaption></figure>
-
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FKYV7j08QhkPfeWdSZCE5%252Fltv_preset.png%3Falt%3Dmedia%26token%3D98dda88c-18ee-4993-9993-ece6d9242a86&width=768&dpr=4&quality=100&sign=6093ec1&sv=2)
 Please note that these examples are for illustration purposes only and do not represent definitive risk or safety thresholds. It's essential to determine your own risk tolerance and comfort level as a user.
 
 If your LTV becomes too high, your position will be liquidated.
+> LTV = Loan to Value a LTV of 50% means that if you borrowed $100, your collateral is $200.
 
 ### How do Liquidations work in Nerite?
 
 Troves get liquidated if the LTV goes above the maximum value.
 
-Nerite uses Stability Pools as its primary liquidation mechanism to absorb liquidated debt and collateral. Each borrow-market has its own dedicated Stability Pool earning liquidation gains (in the respective collateral) in exchange for burning debt. That means Stability Pool depositors earn 100% of the fees from liquidations on the protocl, and earn those fees in the liquidated collateral (for example, ETH).
+Nerite uses Stability Pools as its primary liquidation mechanism to absorb liquidated debt and collateral. Each borrow-market has its own dedicated Stability Pool earning liquidation gains (in the respective collateral) in exchange for burning debt. That means Stability Pool depositors earn 100% of the fees from liquidations on the protocol, and earn those fees in the liquidated collateral (for example, ETH).
 
 Just-In-Time liquidations and a redistribution of debt and collateral across borrowers of the same market handle liquidations as a last resort if the Stability Pool were ever empty.
 
@@ -79,7 +103,7 @@ A special case is when a Redistribution is necessary, then:
 * For ETH, the loss amounts to 10% of the debt (at most). That corresponds to a max. loss of 9.09% expressed in terms of collateral.
 * For rETH/wstETH the loss is 20% of the debt, corresponding to a max. loss of 16.67% expressed in terms of collateral.
 
-<figure><img src="/static/img/liqtable.png" alt=""></img><figcaption></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FhaTvXYC1FTrAwmfXQZ14%252Fliqtable.png%3Falt%3Dmedia%26token%3Da2ab7753-5fd6-4741-8c43-871fc704aa1a&width=768&dpr=4&quality=100&sign=fba442d0&sv=2)
 
 ### How am I compensated for liquidating a Trove? 
 
@@ -107,7 +131,7 @@ The interest you pay is determined by the rate you set yourself. For example, if
 
 ### What are user-set rates?
 
-In Liquity V2, users can set their own interest rates, giving them full control over costs and improving predictability. This feature allows for adaptability to various market conditions and helps stabilize USDN's peg.
+In Nerite *and Liquity V2*, users can set their own interest rates, giving them full control over costs and improving predictability. This feature allows for adaptability to various market conditions and helps stabilize USDN's peg.
 
 User-set interest rates facilitate a capital-efficient equilibrium between USDN borrowers and holders in a fully market-driven manner. Additionally, these rates serve as the primary revenue source for USDN holders, generating a continuous, sustainable real yield for USDN depositors and liquidity providers.
 
@@ -117,7 +141,7 @@ Read more about setting your rates [here](https://www.liquity.org/blog/interest-
 
 ### Can I adjust the rate?
 
-Yes, you can always adjust your interest rate at any time. Since you as a user get to set your own interest rate, you have full autonomy over your borrowing costs.&#x20;
+Yes, you can always adjust your interest rate at any time. Since you as a user get to set your own interest rate, you have full autonomy over your borrowing costs.
 
 Note however, that a fee corresponding to 7 days of average interest is charged when opening the loan, as well as on any rate adjustments that happen less than 7 days after the last adjustment. Without it, low-interest rate borrowers could evade redemptions by sandwiching a redemption transaction with both an upward and downward interest rate adjustment, which in turn would unduly direct the redemption against higher-interest borrowers.
 
@@ -133,7 +157,7 @@ Since redemptions are performed in ascending order of interest rate (for the res
 
 You can see the distribution of other users' rates in a histogram and position yourself accordingly.
 
-<figure><img src="/static/img/rerwere.png" alt=""></img><figcaption></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FHkqGvdaJxndhC8uhzLw0%252Frerwere.png%3Falt%3Dmedia%26token%3D796599d0-6785-4cd2-ad6a-bad02d062f45&width=768&dpr=4&quality=100&sign=c26f7d49&sv=2)
 
 Redemptions usually occur when USDN is trading below $1 minus the current redemption fee. Keeping an eye on the past [redemption activity](https://dune.com/liquity/liquity-v2#redemptions) can help you assess the overall redemption risk, serving as an additional data point for your rate selection.
 
@@ -154,7 +178,7 @@ There are two key parameters to consider:
 
 You have the flexibility to set these parameters as you see fit, allowing you to control the relative riskiness of each Trove. You can create multiple Troves under the same address, enabling you to manage different risk profiles for different portions of your portfolio.
 
-<figure><img src="/static/img/Loan personas.png" alt=""></img><figcaption></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FPtoSsrpN4nxIZviPrc1s%252FLoan%2520personas.png%3Falt%3Dmedia%26token%3D649cb0e4-eb3e-44e4-8fe6-4432dbaed967&width=768&dpr=4&quality=100&sign=bb12995f&sv=2)
 
 ### Are there any other fees related to borrowing?
 
@@ -170,7 +194,7 @@ You can have multiple open Troves for the same collateral or across different co
 
 Yes, they are represented as a NFT (ERC-721), hence easily transferable between wallets. When you send the NFT you also send full access to your Trove and all the funds within it.&#x20;
 
-Please note that more advanced strategies like 'selling' Trovess on secondary markets like OpenSea comes with inherent risks, and caution is advised.
+Please note that more advanced strategies like 'selling' Troves on secondary markets like OpenSea comes with inherent risks, and caution is advised.
 
 ### How do I loop my exposure?
 
@@ -180,7 +204,9 @@ Make sure you choose a frontend that supports this functionality, and be mindful
 
 ### How are collateral risks mitigated?
 
-Liquity V2 will have three separate borrow markets for the different collateral types with their  own Stability Pools (for efficient liquidations), user-set interest rates, and LTV factors for their respective assets (ETH, wstETH, and rETH).&#x20;
+Liquity V2 will have three separate borrow markets for the different collateral types with their  own Stability Pools (for efficient liquidations), user-set interest rates, and LTV factors for their respective assets (ETH, wstETH, and rETH). 
+
+Nerite will have those 3 plus the additional collaterals mentioned above, but all will follow the same immutable patterns.
 
 Risks are mitigated through temporary borrowing restrictions in times of low collateralization of a given market, a redemption logic prioritizing  collateral with less Stability Pool backing, and a collateral shutdown as an emergency measure to maintain system balance and protect against market instability.
 
@@ -203,10 +229,5 @@ The liquidator can freely choose between two fallback liquidation modes for the 
 1. Just-in-time (JIT) liquidation: the liquidator sends an amount of USDN corresponding to the (remaining) debt in exchange for 105% of its nominal value in (staked) ETH.
 2. Redistribution: the liquidator triggers a redistribution, through which the Trove's entire debt and collateral is redistributed to all fellow borrowers of the respective collateral market, in proportion to their own collateral amounts. Thus, the respective borrowers will receive a share of the liquidated collateral and see their debts increase proportionally.
 
-### Why was the Recovery Mode removed? 
-
-The removal of Recovery Mode in V2 ensures that borrowers can benefit from a permanently high LTV regardless of the system state, and up to 11x multiplication.
-
-In Liquity V1 it is mainly needed due to a lack of sustainable yield for the Stability Pool, increasing the reliance on redistribution for liquidations in the long term. Liquity V2 pays out a real yield, and aims to keep the Stability Pools backing sufficiently large through its adaptive redemption logic.
-
-As a replacement for the Recovery Mode, the system may shut down borrow markets whose total collateralization ratio (TCR) falls below 110% (for ETH) or 120% (for wstETH and rETH). The shutdown is performed by incentivizing redemptions against the respective collateral (see [this](https://liquity.gitbook.io/v2-whitepaper/liquity-v2-whitepaper/functionality-and-use-cases#c9aukpugrj32) for more details)
+### Shutdown Borrow Markets
+The system may shut down borrow markets whose total collateralization ratio (TCR) falls below 110% (for ETH) or 120% (for wstETH and rETH). The shutdown is performed by incentivizing redemptions against the respective collateral (see [this](https://liquity.gitbook.io/v2-whitepaper/liquity-v2-whitepaper/functionality-and-use-cases#c9aukpugrj32) for more details)

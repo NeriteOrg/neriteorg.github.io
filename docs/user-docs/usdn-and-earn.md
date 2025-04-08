@@ -2,6 +2,7 @@
 sidebar_position: 3
 ---
 
+
 # USDN & Earn
 
 ### What is USDN?
@@ -31,11 +32,7 @@ Nerite uses Liquity V2's market-driven monetary policy through user-set interest
 When USDN trades above $1, borrowers tend to reduce their rates due to lower redemption risk, making borrowing more and holding USDN less attractive. This helps correct the price downwards.
 
 In contrast, when USDN trades below $1, arbitrageurs will initiate redemptions to restore the peg. Borrowers' exposure to redemption risk prompts them to increase interest rates, boosting demand for USDN (and Earn deposits) and pushing its price upward.
-
-<figure>
-  <img src="/static/img/light - BOLD individual redemption.png" alt="" />
-  <figcaption></figcaption>
-</figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FOPagS0zx2PSCiAFmH8Uq%252Flight%2520-%2520BOLD%2520peg%2520mechanism.png%3Falt%3Dmedia%26token%3Dfcc3163a-a96d-4085-a1ea-d5c4606ab3b7&width=768&dpr=4&quality=100&sign=37ed4c8c&sv=2)
 
 ### How can I earn yield with Nerite?
 
@@ -59,7 +56,7 @@ There is no lockup period. Users are free to withdraw their USDN deposits from t
 
 ### What is the estimated yield on Earn? 
 
-The yield is a representation of the rates borrowers are paying. Since 75% of the borrowers' interest payments go to Earn, the effective yield can exceed the average interest rate paid in a borrow market if less than 75% of the USDN supply is deposited to the respective Stability Pool. This yield amplification sets Liquity V2 apart from competitors and money markets where lending rates cannot be higher than borrow rates.
+The yield is a representation of the rates borrowers are paying. Since 75% of the borrowers' interest payments go to Earn, the effective yield can exceed the average interest rate paid in a borrow market if less than 75% of the USDN supply is deposited to the respective Stability Pool. This yield amplification sets Liquity V2 and Nerite apart from competitors and money markets where lending rates cannot be higher than borrow rates.
 
 Check historic rates on Liquity V2 [here](https://dune.com/liquity/liquity-v2#interest-rates).
 
@@ -72,7 +69,7 @@ The goals are to:
 
 ### How have Stability Pools evolved in Liquity based systems like Nerite, from Liquity V1 to V2?
 
-In V2, the concept of Stability Pools is expanded to accommodate multiple Liquid Staking Tokens (LSTs) and ETH as collateral, keeping the interest revenue and liquidations proceeds inside the respective borrow market (collateral). Each collateral asset thus has its own Stability Pool to distribute yield to USDN depositors.
+In V2, the concept of Stability Pools is expanded to accommodate multiple Liquid Staking Tokens (LSTs), Vanguard crypto tokens, as well as ETH as collateral, and keeping the interest revenue and liquidations proceeds inside the respective borrow market (collateral). Each collateral asset thus has its own Stability Pool to distribute yield to USDN depositors.
 
 Additionally, user-set interest rates in V2 influence the yield dynamics for  Stability Pools depositors (Earn) as the yield is now fully sustainable coming from user-set interest rates (in USDN) rather than token emissions.
 
@@ -82,7 +79,7 @@ Users can deposit their stablecoins into the Stability Pool of their choice, ali
 
 By offering separate pools for different collateral types, the system allows users to choose their exposure based on the perceived risk and potential returns of each LST or ETH. This compartmentalization helps manage systemic risk, ensuring that impacts from liquidations in one asset class don't disproportionately affect the entire ecosystem.
 
-It is important to note that all USDN holders including depositors still remain dependent on USDN to keep its peg, remaining exposed to both all LSTs and ETH.\
+It is important to note that all USDN holders including depositors still remain dependent on USDN to keep its peg, remaining exposed to both all LSTs and ETH.
 
 
 :::tip
