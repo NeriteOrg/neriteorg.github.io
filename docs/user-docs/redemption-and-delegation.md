@@ -2,6 +2,7 @@
 sidebar_position: 4
 ---
 
+
 # Redemptions and Delegation
 
 ### What are redemptions?
@@ -12,10 +13,7 @@ A redemption is essentially swapping USDN for ETH/LST at face value, as if 1 USD
 
 The redeemer sends USDN to the protocol and in return  gets a mix of WETH, wstETH and rETH (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](#how-is-the-collateral-split-determined) for more info).
 
-<figure>
-  <img src="/static/img/light - BOLD individual redemption.png" alt="" />
-  <figcaption></figcaption>
-</figure>   
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252F0XdFvKy05sdM3JClXcI5%252Flight%2520-%2520BOLD%2520individual%2520redemption.png%3Falt%3Dmedia%26token%3D3037c032-5464-4614-b206-d9d5157c0228&width=768&dpr=4&quality=100&sign=abb38c31&sv=2)
 
 Redemptions start from the borrower paying the least interest.
 
@@ -23,15 +21,15 @@ Read more about how to [protect yourself](#how-can-i-stay-protected) from redemp
 
 You can also watchi this [9 min video](https://www.youtube.com/watch?v=CQVmjFx987A) on redemptions.
 
-### What happens if two Troves have the same IR? <a href="#docs-internal-guid-85409cf3-7fff-2712-b20f-92b229718cbb" id="docs-internal-guid-85409cf3-7fff-2712-b20f-92b229718cbb"></a>
+### What happens if two Troves have the same IR?
 
 In this case, the "Last In, First Out" (LIFO) principle applies, meaning the Trove that set its interest rate more recently will be redeemed first.
 
-### When can redemptions occur? <a href="#docs-internal-guid-85409cf3-7fff-2712-b20f-92b229718cbb" id="docs-internal-guid-85409cf3-7fff-2712-b20f-92b229718cbb"></a>
+### When can redemptions occur? 
 
 A redemption can occur at any time, but will likely only happen when it is profitable to do so. This is usually the case when the price of USDN is less than $1 (minus the current redemption fee).
 
-### Who can initiate a redemption? <a href="#docs-internal-guid-595b4008-7fff-7d35-9a38-68d9e7feef1a" id="docs-internal-guid-595b4008-7fff-7d35-9a38-68d9e7feef1a"></a>
+### Who can initiate a redemption? 
 
 Any Ethereum address can initiate a redemption, provided that they have a sufficient amount of USDN to do so. However, we expect redemptions to be mainly performed by professional bots rather than humans.
 
@@ -50,15 +48,16 @@ You can see your collateral and debt reduced equally (in USD terms) and the rede
 
 Partially affected Troves whose debt stays above the minimum debt threshold of 2000 USDN continue to work as before, while Troves whose debt is reduced to a lesser amount (or 0) switch to a dormant operating mode (see below for [more](#what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount) info).
 
-### How do redemptions work using three collateral assets? <a href="#docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a" id="docs-internal-guid-6cda6d73-7fff-78b8-1c4f-6cb96385a98a"></a>
+### How do redemptions work using three collateral assets?
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FJtx0jgGBkGisNExyXZ5a%252Fredemption%2520split%25202.png%3Falt%3Dmedia%26token%3D79f895c0-290c-41e9-9aeb-b3fa5a3709f5&width=768&dpr=4&quality=100&sign=17e818d8&sv=2)
 
-In contrast to LUSD, USDN is backed by a multitude of collaterals. Instead of letting the redeemer freely choose the collateral to redeem, Liquity V2 optimizes the process for economic safety. Redemptions are thus serviced through a collateral mix in a way that enhances the overall backing of USDN.
+In contrast to LUSD, USDN is backed by a multitude of collaterals. Instead of letting the redeemer freely choose the collateral to redeem, Liquity V2 and Nerite optimize the process for economic safety. Redemptions are thus serviced through a collateral mix in a way that enhances the overall backing of USDN.
 
 The process starts with the Troves paying the lowest interest rates in each collateral market and continues until the full amount of USDN is exchanged for collateral assets. Redemptions can be partial or full, as illustrated below.
 
 In this example, the rETH market shows a full redemption of the first Trove and a partial redemption of the second. The wstETH and ETH markets have one partial and two full redemptions, respectively
 
-<figure><img src="/static/img/assets/redemption split 2.png" alt=""></img><figcaption><p>Example redemption across all three collateral markets</p></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FJtx0jgGBkGisNExyXZ5a%252Fredemption%2520split%25202.png%3Falt%3Dmedia%26token%3D79f895c0-290c-41e9-9aeb-b3fa5a3709f5&width=768&dpr=4&quality=100&sign=17e818d8&sv=2)
 
 ### How is the collateral split determined?
 
@@ -70,11 +69,11 @@ Here is an example: given outside debt amounts of 100 USDN, 50 USDN and 100 USDN
 
 
 
-<figure><img src="/static/img/assets/redeem2.png" alt=""></img><figcaption></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FjSQv4scadWPAaEtb0whz%252Fredeem2.png%3Falt%3Dmedia%26token%3D6b7dc320-1b97-4cd7-9ad1-1afbbb7c70fe&width=768&dpr=4&quality=100&sign=eeabe72d&sv=2)
 
 ### Is there a redemption fee?
 
-Yes. The redemption fee mechanics are broadly the same as in Liquity V1, but with adapted parametrization leading to a faster fee decay. The redemption fee is taken as a cut of the total ETH/LST drawn from the system in a redemption. Contrary to V1, the fee does not go to the LQTY stakers but stays with the users as part of their collateral.
+Yes. The redemption fee mechanics are broadly the same as in Liquity V1, but with adapted parametrization leading to a faster fee decay. The redemption fee is taken as a cut of the total ETH/LST drawn from the system in a redemption. Contrary to Liquity V1, the fee does not go to the LQTY stakers but stays with the users as part of their collateral.
 
 Redemption fees are based on the `baseRate` state variable, which is dynamically updated. The `baseRate` increases with each redemption, and exponentially decays according to time passed since the last redemption (half-life of 6 hours).
 
@@ -82,7 +81,7 @@ Upon each redemption of x USDN: `baseRate` is decayed based on time passed since
 
 The redemption fee percentage is given by `min (0.5%  + baseRate, 100%)`.
 
-<figure><img src="/static/img/assets/redem.png" alt=""></img><figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FoS6SRJ41pw82HYtf9Wd2%252Fredem.png%3Falt%3Dmedia%26token%3D244f49b2-3587-4d26-bb9e-b90b9713361d&width=768&dpr=4&quality=100&sign=59cf6c&sv=2)<figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
 
 ### How can I stay protected?
 
@@ -92,7 +91,7 @@ The risk of redemption depends on two factors: the interest rate you set and the
 
 You can see this on any frontned, in the example below the number is 41M.
 
-<figure><img src="/static/img/assets/rerwere.png" alt=""></img><figcaption></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FHkqGvdaJxndhC8uhzLw0%252Frerwere.png%3Falt%3Dmedia%26token%3D796599d0-6785-4cd2-ad6a-bad02d062f45&width=768&dpr=4&quality=100&sign=c26f7d49&sv=2)
 
 This means that 41M USDN must be removed from the system before it would reach you. However, this number is relative, and you also need to consider recent redemption activity. While past events don't guarantee future outcomes, they can serve as a useful guide.
 
@@ -104,7 +103,7 @@ During such times, you can comfortably reduce the interest rate you're paying wi
 
 ### What is delegation of interest rates?
 
-Interest rate delegation is a feature in Liquity V2 that allows borrowers to delegate the management of their interest rate to a third party. This enables them to create a passive, hands-off position, while still keeping a competitive rate and low redemption risk.
+Interest rate delegation is a feature in Liquity V2 and Nerite that allows borrowers to delegate the management of their interest rate to a third party. This enables them to create a passive, hands-off position, while still keeping a competitive rate and low redemption risk.
 
 There are three types of delegations:
 
@@ -126,7 +125,7 @@ Coming soon.
 |        |                  |                  |             |
 |        |                  |                  |             |
 
-_Note that Liquity AG is not responsible for the actions of any delegates. Please do your own research._
+_Note that neither  Liquity AG nor Nerite are responsible for the actions of any delegates. Please do your own research._
 
 ### What happens if there are issues with the smart contract for delegating interest rates? 
 
@@ -136,14 +135,14 @@ Your Trove would not be affected - the only thing would get affected is the inte
 
 Given that the _raison d'etre_ for redemptions is to diminish USDN supply in response to reduced demand, and interest rates drive demand, rate-based redemption processing is a more sustainable and effective lever to reach market equilibrium. Actively managing for both interest rate and LTV would weaken the ability to enforce market-level interest rates and deposit yields, while complicating the process for the system and its users
 
-### What's the difference in redemption fees charged between Liquity V1 and V2? 
+### What's the difference in redemption fees charged between Liquity V1 and Nerite? 
 In v2, when borrowers are affected by redemptions, the redemption fee charged to the redeemer stays within the affected Troves instead of being diverted as in Liquity.
 
-So, in Liquity the `borrower_loss = redemption_fee + redeemer_gain`, while in Bold it's `borrower_loss = redeemer_gain`.
+So, in Liquity the `borrower_loss = redemption_fee + redeemer_gain`, while in NUSD it's `borrower_loss = redeemer_gain`.
 
 ### What happens when redemptions cause a debt of a Trove to fall below the minimum amount?
 
-If the redeemed amount exceeds the debt of an affected Trove, it doesn't get closed as in Liquity V1, but remains open with 0 USDN debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow anew to bring its debt above the minimum of 2000 USDN, topping up its collateral if needed.
+If the redeemed amount exceeds the debt of an affected Trove, it doesn't get closed as in Liquity V1, but remains open with 0 USDN debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow again to bring its debt above the minimum of 2000 USDN, topping up its collateral if needed.
 
 In the scenario that the redeemed amount of a Trove does not exceed the debt of a Trove, but would leave it between 0 and 2000 USDN, the Trove would remain open with the remaining debt, and the remaining collateral. The owner of the Trove may close it by paying off the remaining debt and withdrawing the remaining collateral, or borrow anew as described above.
 
@@ -158,7 +157,7 @@ spender to `CollateralRegistry address`and the amount to be at least as high as 
 
 **Example for 1000 USDN:**
 
-<figure><img src="/static/img/assets/red1.png" alt=""></img><figcaption></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FyfWVv0gTWqCfg3YWYder%252Fred1.png%3Falt%3Dmedia%26token%3Dc05978b8-7946-4828-b81c-e7256bfeb0ce&width=768&dpr=4&quality=100&sign=b9753e68&sv=2)
 
 **Step 2**\
 You can now redeem USDN using the `CollateralRegistry` contract:
@@ -175,4 +174,4 @@ Note: The redemption fee must be higher than the current fee.
 
 `_maxFeePercentage:` 1% \* 1e16, i.e. 1000000000000000000
 
-<figure><img src="/static/img/red2 (1).png" alt=""></img><figcaption></figcaption></figure>
+![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FcVvVXORMhz0UPk0QHMW0%252Fred2.png%3Falt%3Dmedia%26token%3Dd1be9844-ce90-415a-b35e-a276003532ce&width=768&dpr=4&quality=100&sign=9a897da2&sv=2)
