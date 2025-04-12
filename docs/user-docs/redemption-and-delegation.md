@@ -81,7 +81,7 @@ Upon each redemption of x USDN: `baseRate` is decayed based on time passed since
 
 The redemption fee percentage is given by `min (0.5%  + baseRate, 100%)`.
 
-![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FoS6SRJ41pw82HYtf9Wd2%252Fredem.png%3Falt%3Dmedia%26token%3D244f49b2-3587-4d26-bb9e-b90b9713361d&width=768&dpr=4&quality=100&sign=59cf6c&sv=2)<figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
+<figure>![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FoS6SRJ41pw82HYtf9Wd2%252Fredem.png%3Falt%3Dmedia%26token%3D244f49b2-3587-4d26-bb9e-b90b9713361d&width=768&dpr=4&quality=100&sign=59cf6c&sv=2)<figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
 
 ### How can I stay protected?
 
