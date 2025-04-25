@@ -31,9 +31,9 @@ F("Set Rate, Collateral, and Debt value")  -- Delegate -->  G("Manager")
 
 E  -->  F
 
-n2["Set Rate, Collateral, and Debt value"]  -- Delegate -->  n3["Manager"]
+n2("Set Rate, Collateral, and Debt value")  -- Delegate -->  n3("Manager")
 
-n1["Create Trove"]  -->  n2
+n1("Create Trove")  -->  n2
 
 A  --Deposit ARB-->  n1
 ```
