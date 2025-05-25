@@ -6,15 +6,15 @@ sidebar_position: 1
 # General
 
 ### What is Nerite?
-Nerite is a decentralized borrowing protocol that lets users deposit ETH, LSTs, and ARB as collateral, and mint the stablecoin NUSD at an interest rate depositors choose. Nerite is based on Liquity v2.
+Nerite is a decentralized borrowing protocol that lets users deposit ETH, LSTs, and ARB as collateral, and mint the stablecoin USND at an interest rate depositors choose. Nerite is based on Liquity v2.
 
 ### The main use-cases for Nerite are:
 
-- Borrow NUSD
+- Borrow USND
 - 1-click multiply exposure to collateral assets
-- Earn yield by depositing NUSD in the stability pool or farming elsewhere
+- Earn yield by depositing USND in the stability pool or farming elsewhere
 - Stake NERI to direct PLI (Protocol Liquidity Incentives) and earn rewards
-- Stream NUSD as a subscription, salary, grant, or any other kind of payment
+- Stream USND as a subscription, salary, grant, or any other kind of payment
 
 To understand Nerite it's helpful to understand [Liquity](https://www.liquity.org) 
 
@@ -37,7 +37,7 @@ To understand Nerite it's helpful to understand [Liquity](https://www.liquity.or
 |--|--|
 | Immutability|ETH Mainnet (Liquity V2) only vs Arbitrum Only (Nerite) |
 |Decentralization| **Additional Collateral:** sfrxETH, weETH, pufETH, tETH, tBTC, COMP, and ARB|
-|Redemption of stablecoins for underlying collateral maintains the $1.00 peg no matter what| Nerite adds Streaming: NUSD can be streamed at any rate using  [Superfluid](https://www.superfluid.finance/). Pay anyone every second.|
+|Redemption of stablecoins for underlying collateral maintains the $1.00 peg no matter what| Nerite adds Streaming: USND can be streamed at any rate using  [Superfluid](https://www.superfluid.finance/). Pay anyone every second.|
 |Shared Security from Friendly Forks |ARB deposited in the protocol can be delegated by Nerite governance.|
 ||Nerite adds Additional security features to allow for the other features, like debt limits|
 |||\

@@ -3,60 +3,60 @@ sidebar_position: 3
 ---
 
 
-# NUSD & Earn
+# USND & Earn
 
-### What is NUSD?
+### What is USND?
 
-NUSD is the USD-pegged stablecoin issued by the Nerite protocol. It's decentralized, overcollateralized, and backed only by a basket of crypto native assets.
+USND is the USD-pegged stablecoin issued by the Nerite protocol. It's decentralized, overcollateralized, and backed only by a basket of crypto native assets.
 
-NUSD is a resilient stablecoin by design:
+USND is a resilient stablecoin by design:
 
 * Only backed by crypto assets ("no real world assets" like US Treasuries)
 * Not subject to collateral changes and protocol upgrades (immutable)
 * Directly redeemable for the underlying assets at any time by any one permissionlessly (always convertible in a fast and liquid way)
 * Can only be created by users depositing more collateral. 
 
-### What are NUSD's main benefits compared to other stablecoins?
+### What are USND's main benefits compared to other stablecoins?
 
-* NUSD is backed by a variety of LSTs, LRTs, plus ETH, ARB, and COMP.
+* USND is backed by a variety of LSTs, LRTs, plus ETH, ARB, and COMP.
 * It is always redeemable for the underlying assets, meaning you can always swap it as if worth $1, for the collateral backing it
-* The contracts used to issue NUSD are immutable, not allowing any changes and significantly reducing attack vectors
-* NUSD has native incentives via Protocol Incentivized Liquidity (PIL) directed by governance, ensuring that there will always be sufficient liquidity to handle transactions
-* NUSD is a streamable super-token, making it perfect for subscriptions, money streaming, annuities, and other specialized use cases.
-* NUSD is Arbitrum native, and is built specifically for the fast and cheap Arbitrum network.
+* The contracts used to issue USND are immutable, not allowing any changes and significantly reducing attack vectors
+* USND has native incentives via Protocol Incentivized Liquidity (PIL) directed by governance, ensuring that there will always be sufficient liquidity to handle transactions
+* USND is a streamable super-token, making it perfect for subscriptions, money streaming, annuities, and other specialized use cases.
+* USND is Arbitrum native, and is built specifically for the fast and cheap Arbitrum network.
 
-### What is NUSD's peg mechanism?
+### What is USND's peg mechanism?
 
-Nerite uses Liquity V2's market-driven monetary policy through user-set interest rates to maintain NUSD's peg and to dynamically respond to situations where the token is above or below $1.00.
+Nerite uses Liquity V2's market-driven monetary policy through user-set interest rates to maintain USND's peg and to dynamically respond to situations where the token is above or below $1.00.
 
-When NUSD trades above $1, borrowers tend to reduce their rates due to lower redemption risk, making borrowing more and holding NUSD less attractive. This helps correct the price downwards.
+When USND trades above $1, borrowers tend to reduce their rates due to lower redemption risk, making borrowing more and holding USND less attractive. This helps correct the price downwards.
 
-In contrast, when NUSD trades below $1, arbitrageurs will initiate redemptions to restore the peg. Borrowers' exposure to redemption risk prompts them to increase interest rates, boosting demand for NUSD (and Earn deposits) and pushing its price upward.
+In contrast, when USND trades below $1, arbitrageurs will initiate redemptions to restore the peg. Borrowers' exposure to redemption risk prompts them to increase interest rates, boosting demand for USND (and Earn deposits) and pushing its price upward.
 ![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FOPagS0zx2PSCiAFmH8Uq%252Flight%2520-%2520BOLD%2520peg%2520mechanism.png%3Falt%3Dmedia%26token%3Dfcc3163a-a96d-4085-a1ea-d5c4606ab3b7&width=768&dpr=4&quality=100&sign=37ed4c8c&sv=2)
 
 ### How can I earn yield with Nerite?
 
-* Stability Pool deposits (Earn): Earn protocol revenue by depositing NUSD into the various Stability Pools.
-* Protocol Incentivized Liquidity (PIL): Supply liquidity for NUSD onto the incentivized external DEXes. 
+* Stability Pool deposits (Earn): Earn protocol revenue by depositing USND into the various Stability Pools.
+* Protocol Incentivized Liquidity (PIL): Supply liquidity for USND onto the incentivized external DEXes. 
 * Stake NERI (coming soon): Accrue voting power over liquidity incentives by staking NERI. On top of directing revenue, NERI stakers can potentially receive bribes (subject to governance vote) from third parties as an added bonus.
 
 ### Where does the yield for the Stability Pool deposits come from?
 
 The yield comes from three sources:
 
-1. **Interest payments**: Each borrow-market funnels 75% of the of its revenue to its Stability Pool depositors (Earners). This is paid out in NUSD.
-2. **Liquidation fees**: Your NUSD will be used to liquidate under-collateralized loans, effectively buying their collateral with a \~5% discount. This is paid out in (staked) ETH.
+1. **Interest payments**: Each borrow-market funnels 75% of the of its revenue to its Stability Pool depositors (Earners). This is paid out in USND.
+2. **Liquidation fees**: Your USND will be used to liquidate under-collateralized loans, effectively buying their collateral with a \~5% discount. This is paid out in (staked) ETH.
 3. **Inflationary Incentives**: NERI tokens are added as a bonus inflationary reward to depositors.
 
 All the yield is fully sustainable, scalable and "real", with no token emissions and lockups.
 
 ### Is there a lockup period? 
 
-There is no lockup period. Users are free to withdraw their NUSD deposits from the Stability Pool whenever they want.
+There is no lockup period. Users are free to withdraw their USND deposits from the Stability Pool whenever they want.
 
 ### What is the estimated yield on Earn? 
 
-The yield is a representation of the rates borrowers are paying. Since 75% of the borrowers' interest payments go to Earn, the effective yield can exceed the average interest rate paid in a borrow market if less than 75% of the NUSD supply is deposited to the respective Stability Pool. This yield amplification sets Liquity V2 and Nerite apart from competitors and money markets where lending rates cannot be higher than borrow rates.
+The yield is a representation of the rates borrowers are paying. Since 75% of the borrowers' interest payments go to Earn, the effective yield can exceed the average interest rate paid in a borrow market if less than 75% of the USND supply is deposited to the respective Stability Pool. This yield amplification sets Liquity V2 and Nerite apart from competitors and money markets where lending rates cannot be higher than borrow rates.
 
 Check historic rates on Liquity V2 [here](https://dune.com/liquity/liquity-v2#interest-rates).
 
@@ -69,9 +69,9 @@ The goals are to:
 
 ### How have Stability Pools evolved in Liquity based systems like Nerite, from Liquity V1 to V2?
 
-In V2, the concept of Stability Pools is expanded to accommodate multiple Liquid Staking Tokens (LSTs), Vanguard crypto tokens, as well as ETH as collateral, and keeping the interest revenue and liquidations proceeds inside the respective borrow market (collateral). Each collateral asset thus has its own Stability Pool to distribute yield to NUSD depositors.
+In V2, the concept of Stability Pools is expanded to accommodate multiple Liquid Staking Tokens (LSTs), Vanguard crypto tokens, as well as ETH as collateral, and keeping the interest revenue and liquidations proceeds inside the respective borrow market (collateral). Each collateral asset thus has its own Stability Pool to distribute yield to USND depositors.
 
-Additionally, user-set interest rates in V2 influence the yield dynamics for  Stability Pools depositors (Earn) as the yield is now fully sustainable coming from user-set interest rates (in NUSD) rather than token emissions.
+Additionally, user-set interest rates in V2 influence the yield dynamics for  Stability Pools depositors (Earn) as the yield is now fully sustainable coming from user-set interest rates (in USND) rather than token emissions.
 
 ### How do risks differ for the different Stability Pools?
 
@@ -79,7 +79,7 @@ Users can deposit their stablecoins into the Stability Pool of their choice, ali
 
 By offering separate pools for different collateral types, the system allows users to choose their exposure based on the perceived risk and potential returns of each LST or ETH. This compartmentalization helps manage systemic risk, ensuring that impacts from liquidations in one asset class don't disproportionately affect the entire ecosystem.
 
-It is important to note that all NUSD holders including depositors still remain dependent on NUSD to keep its peg, remaining exposed to both all LSTs and ETH.
+It is important to note that all USND holders including depositors still remain dependent on USND to keep its peg, remaining exposed to both all LSTs and ETH.
 
 
 :::tip
