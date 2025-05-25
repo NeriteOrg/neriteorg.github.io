@@ -36,7 +36,7 @@ To understand Nerite it's helpful to understand [Liquity](https://www.liquity.or
 | Similarities | Differences  |
 |--|--|
 | Immutability|ETH Mainnet (Liquity V2) only vs Arbitrum Only (Nerite) |
-|Decentralization| **Additional Collateral:** sfrxETH, weETH, pufETH, tETH, tBTC, COMP, and ARB|
+|Decentralization| **Additional Collateral:** sfrxETH, weETH, tETH, tBTC, COMP, and ARB|
 |Redemption of stablecoins for underlying collateral maintains the $1.00 peg no matter what| Nerite adds Streaming: USND can be streamed at any rate using  [Superfluid](https://www.superfluid.finance/). Pay anyone every second.|
 |Shared Security from Friendly Forks |ARB deposited in the protocol can be delegated by Nerite governance.|
 ||Nerite adds Additional security features to allow for the other features, like debt limits|

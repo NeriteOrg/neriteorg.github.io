@@ -49,7 +49,6 @@ Nerite works with the following ten collaterals:
 - wstETH (wrapped Lido ETH)
 - rETH (Rocket pool ETH)
 - rsETH (Kelp ETH)
-- pufETH (Puffer ETH)
 - weETH (Etherfi ETH) 
 - tETH (Treehouse ETH)
 - ARB (Arbitrum) 
