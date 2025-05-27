@@ -1,6 +1,13 @@
-# Website
+# Nerite Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. Thanks for the awesome open source tools, Docusaurus. 
+
+## Contributing
+Make branches off of `main`.
+Make pull requests into `main`.
+Do not mess with build files or the `gh-pages` branch please.
+
+Contributions are very welcome! Thank you!
 
 ### Installation
 
