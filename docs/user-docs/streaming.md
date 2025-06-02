@@ -3,7 +3,7 @@ title: Streaming
 ---
 
 # Streaming
-Nerite has the [Superfluid](superfluid.com) protocol built into it, so USND is a native "Super Token" that support streaming. That means you can make real time payments, where USND is sent linearly over time. You can send $0.000001 per second for two weeks, $5 per month for a year, $100 per hour indefinitely... It's completely up to you. 
+Nerite has the [Superfluid](https://www.superfluid.finance/) protocol built into it, so USND is a native "Super Token" that support streaming. That means you can make real time payments, where USND is sent linearly over time. You can send $0.000001 per second for two weeks, $5 per month for a year, $100 per hour indefinitely... It's completely up to you. 
 
 
 :::tip
