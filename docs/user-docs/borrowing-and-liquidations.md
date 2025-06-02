@@ -55,9 +55,8 @@ Nerite works with the following ten collaterals:
 - COMP (Compound Finance)
 - tBTC (Threshold Bitcoin)
 
-::: tip
-New collateral types can never be added. But existing ones can
-be removed, or re-added, based on risk factors. 
+:::tip
+New collateral types can never be added. But existing ones can be removed, or re-added, based on risk factors. 
 :::
 
 ### Is there a minimum debt?
