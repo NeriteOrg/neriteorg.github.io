@@ -2,19 +2,19 @@
 sidebar_position: 6
 ---
 
-# Risk Disclosure
+# Audits & Risk Disclosure
 
 Detailed disclosures of protocol risks and user considerations. Nerite code has been audited several times by top firms.
 
 ## Contract Risk 
 
-Underlying Liquity contracts are audited and secure. Nerite Protocol is a fork of Liquity and inherits most of the same risks and security considerations, but with several updates.
+Underlying Liquity contracts are audited and secure. Nerite Protocol is a fork of Liquity and inherits most of the same risks and security considerations, but with several differences.
 
-Nerite protocol contracts are audited by Sherlock, Recon, and other independent auditors.
+Nerite protocol contracts (and all changes from the Liquity core contracts) are audited by Sherlock, 0xSimao and other independent auditors.
 
-Reports are available here: 
-- To be released 
-- To be released
+Nerite audits: 
+- [Report: Sherlock audit with 0xSimao](https://drive.google.com/file/d/1knlIgoEGv5x33n9mhTLRqJe8T55r3HCy/view?usp=sharing)
+- Nerite also underwent extensive testing with automated vulnerability testing with [Octane](https://octane.security/), with reports available for each pull request on our Github.
 
 
 ## Centralization Risk

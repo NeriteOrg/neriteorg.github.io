@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Bug Bounty
+# Liquity's Bug Bounty
 
 A bug bounty program for Liquity’s underlying smart contracts that Nerite uses is now live. We intend for hackers to look for smart contract vulnerabilities in our system that can lead to loss of funds or locked components.
 
