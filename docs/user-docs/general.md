@@ -6,7 +6,7 @@ sidebar_position: 1
 # General
 
 ### What is Nerite?
-Nerite is a decentralized borrowing protocol that lets users deposit ETH, LSTs, and ARB as collateral, and mint the stablecoin USND at an interest rate depositors choose. Nerite is based on Liquity v2.
+Nerite is a decentralized borrowing protocol that lets users deposit ETH, LSTs, and ARB as collateral, and mint the stablecoin USND at an interest rate depositors choose. Nerite is friendly fork based on Liquity v2.
 
 ### The main use-cases for Nerite are:
 
@@ -32,7 +32,7 @@ To understand Nerite it's helpful to understand [Liquity](https://www.liquity.or
 |Redemption of stablecoins for underlying collateral maintains the $1.00 peg no matter what| Troves are now transferable|
 |ETH Mainnet Only|V1’s code was free and open-sourced (FOSS), while with V2, Liquity will have its code set as a business source license (BUSL)|
 
-### Nerite Vs Liquity V2
+### Nerite vs Liquity V2
 | Similarities | Differences  |
 |--|--|
 | Immutability|ETH Mainnet (Liquity V2) only vs Arbitrum Only (Nerite) |
@@ -43,4 +43,4 @@ To understand Nerite it's helpful to understand [Liquity](https://www.liquity.or
 |||\
 
 ## Does Nerite have governance?
-Nerite is subject to minimal governance which is solely tasked with distributing Protocol Liquidity Incentives (PIL), directing 25% of the protocol's revenue to external initiatives, delegating ARB, and updating collateral debt limits.
+Nerite is subject to minimal governance which is solely tasked with distributing Protocol Liquidity Incentives (PIL), directing 25% of the protocol's revenue to external initiatives, delegating ARB, and updating collateral debt limits. Governance can never change the fee split, update protocol parameters, mint new stablecoins, or anything else.
