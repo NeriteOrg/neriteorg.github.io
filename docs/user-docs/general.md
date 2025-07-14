@@ -43,4 +43,4 @@ To understand Nerite it's helpful to understand [Liquity](https://www.liquity.or
 |||\
 
 ## Does Nerite have governance?
-Nerite is subject to minimal governance which is solely tasked with distributing Protocol Liquidity Incentives (PIL), directing 25% of the protocol's revenue to external initiatives, delegating ARB, and updating collateral debt limits.
+Nerite is subject to minimal governance which is solely tasked with distributing Protocol Liquidity Incentives (PIL), directing 25% of the protocol's revenue to external initiatives, delegating ARB, and updating collateral debt limits. Governance can never change the fee split, update protocol parameters, mint new stablecoins, or anything else.

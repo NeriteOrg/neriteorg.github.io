@@ -23,6 +23,15 @@ function HomepageHeader() {
             Nerite User Docs
           </Link>
         </div>
+        <br />
+        <br />
+        <div className={styles.buttons}>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/category/technical-documentation/">
+            Nerite Technical Docs
+          </Link>
+        </div>
       </div>
     </header>
   );
