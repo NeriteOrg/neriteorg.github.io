@@ -20,7 +20,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/category/user-docs/">
-            Nerite Overview - 3 min ⏱️
+            Nerite User Docs
           </Link>
         </div>
       </div>
