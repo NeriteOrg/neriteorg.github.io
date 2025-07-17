@@ -1,32 +1,33 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Translate from '@docusaurus/Translate';
 
 const FeatureList = [
   {
-    title: 'Redeemable',
+    title: <Translate id="feature.redeemable.title">Redeemable</Translate>,
     Svg: require('@site/static/img/blue.png').default,
     description: (
       <>
-        Each stablecoin issued by Nerite is redeemable for $1 of collateral in the system.
+        <Translate id="feature.redeemable.desc">Each stablecoin issued by Nerite is redeemable for $1 of collateral in the system.</Translate>
       </>
     ),
   },
   {
-    title: 'Streamable',
+    title: <Translate id="feature.streamable.title">Streamable</Translate>,
     Svg: require('@site/static/img/green.png').default,
     description: (
       <>
-        USND is a streaming super-token stablecoin built with the Superfluid protocol.
+        <Translate id="feature.streamable.desc">USND is a streaming super-token stablecoin built with the Superfluid protocol.</Translate>
       </>
     ),
   },
   {
-    title: 'Sustainable',
+    title: <Translate id="feature.sustainable.title">Sustainable</Translate>,
     Svg: require('@site/static/img/red.png').default,
     description: (
       <>
-        USND yield is sustainable and comes from multiple sources. 100% of protocol revenue is directed towards users.
+        <Translate id="feature.sustainable.desc">USND yield is sustainable and comes from multiple sources. 100% of protocol revenue is directed towards users.</Translate>
       </>
     ),
   },
