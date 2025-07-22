@@ -57,7 +57,18 @@ const config = {
   markdown: {
     mermaid: true,
   },
-  themes: ["@docusaurus/theme-mermaid"],
+  themes: [
+  '@docusaurus/theme-mermaid',
+  /** @type {[string, import("@easyops-cn/docusaurus-search-local").PluginOptions]} */
+  [
+    require.resolve("@easyops-cn/docusaurus-search-local"),
+    {
+      hashed: true,
+      language: ["en"],
+      searchBarShortcutKeymap: "ctrl+shift+f",
+    },
+  ],
+],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
