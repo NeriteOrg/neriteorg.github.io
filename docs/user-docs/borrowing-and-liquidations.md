@@ -40,7 +40,7 @@ A  --Deposit ARB-->  n1
 
 Each Trove allows you to manage a loan, adjusting collateral and debt values as needed, as well as setting your own interest rate. Trove management can optionally be delegated to a "Manager" who is given special permissions. 
 
-Troves are also transferable NFTs, and can be found in the wallet of the owner. Be cautious with this: transfering the NFT also transfers the ownership of the position.
+Troves are also transferable NFTs, and can be found in the wallet of the owner. Be cautious with this: transferring the NFT also transfers the ownership of the position.
 
 ### What types of collateral can I use on Nerite?
 
@@ -87,6 +87,8 @@ If your LTV becomes too high, your position will be liquidated.
 > LTV = Loan to Value a LTV of 50% means that if you borrowed $100, your collateral is $200.
 
 ### How do Liquidations work in Nerite?
+
+Nerite primarily uses Api3's OEV oracles to prevent value leakage and maintain proper price feeds for our collaterals. Chainlink is also used as a backup in some cases. Check out the [oracles](/docs/technical-documentation/oracles) section for more info.
 
 Troves get liquidated if the LTV goes above the maximum value.
 
@@ -182,7 +184,7 @@ You have the flexibility to set these parameters as you see fit, allowing you to
 
 To impede Trove redemption evasion strategies where borrowers try to minimize their interest payments in an unfair manner, a small "premature adjustment fee" is charged on interest rate changes that happen within less than 7 days since the last adjustment (or the opening of the Trove). The premature adjustment fee is equal to 7 days of average interest on the respective borrow market. Note that this fee differs from the user's set interest rate.&#x20;
 
-The fee is denominated in UDSN and added to the Trove's debt. The same fee is charged when a new Trove is opened or when its debt is increased (only affecting the added debt).
+The fee is denominated in USND and added to the Trove's debt. The same fee is charged when a new Trove is opened or when its debt is increased (only affecting the added debt).
 
 ### How many Troves (loans) can I open with the same address?
 
@@ -202,7 +204,7 @@ Make sure you choose a frontend that supports this functionality, and be mindful
 
 ### How are collateral risks mitigated?
 
-Liquity V2 will have three separate borrow markets for the different collateral types with their  own Stability Pools (for efficient liquidations), user-set interest rates, and LTV factors for their respective assets (ETH, wstETH, and rETH). 
+Liquity V2 will have three separate borrow markets for the different collateral types with their own Stability Pools (for efficient liquidations), user-set interest rates, and LTV factors for their respective assets (ETH, wstETH, and rETH). 
 
 Nerite will have those 3 plus the additional collaterals mentioned above, but all will follow the same immutable patterns.
 
