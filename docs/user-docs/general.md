@@ -50,5 +50,6 @@ Nerite is subject to minimal governance which is solely tasked with distributing
 
 Dune Dashboard: https://dune.com/niftyteam/nerite
 
+Supefluid USND streaming dashboard: https://app.superfluid.org/
 
 
