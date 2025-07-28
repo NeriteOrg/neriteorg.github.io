@@ -117,12 +117,10 @@ Borrowers should thus keep an eye on the interest rate range and the maximum upd
 
 ### Who are the current active interest rate delegates? <a href="#docs-internal-guid-441d8c3f-7fff-4efa-6319-4ba00d908597" id="docs-internal-guid-441d8c3f-7fff-4efa-6319-4ba00d908597"></a>
 
-Coming soon.
 
-| Entity | Collateral Asset | Delegate Address | Description |
+| Entity | Collateral Assets | Delegation Info | Description |
 | ------ | ---------------- | ---------------- | ----------- |
-|        |                  |                  |             |
-|        |                  |                  |             |
+| Summerstone | All assets on Nerite | https://summerstone.xyz/docs/for-users/managed-interest-rates/supported-protocols/usnd-from-nerite | Nerite's first major Rate Manager partner, and infra provider. |
 |        |                  |                  |             |
 
 _Note that neither  Liquity AG nor Nerite are responsible for the actions of any delegates. Please do your own research._
