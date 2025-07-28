@@ -35,7 +35,7 @@ All oracles have a 25-hour staleness threshold to ensure price feeds remain curr
 
 ## Usage
 
-These oracles are used throughout the Nerite protocol for:
+These oracles are used as part of the PriceFeeds in the Nerite protocol for:
 - Collateral valuation
 - Liquidation calculations
 - Risk management
