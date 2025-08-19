@@ -18,9 +18,12 @@ Nerite is a decentralized borrowing protocol that lets users deposit ETH, LSTs, 
 
 To understand Nerite it's helpful to understand [Liquity](https://www.liquity.org) 
 
-> Liquity V1 was an immutable lending protocol that allowed users to take 0% interest loans on their ETH to receive $LUSD. Over the past 4 years it proved itself resilient in a variety of market conditions over the past 4 years. 
-> 
-> Liquity V2 is the next iteration of borrowing, allowing users to set their own interest rate, and use more tokens as collateral.
+
+:::tip
+**Liquity V1** was an immutable lending protocol that allowed users to take 0% interest loans on their ETH to receive $LUSD. Over the past 4 years it proved itself resilient in a variety of market conditions.
+
+**Liquity V2** is the next iteration of borrowing, allowing users to set their own interest rate, and use more tokens as collateral.
+:::
 
 
 ### Liquity V1 vs Liquity V2

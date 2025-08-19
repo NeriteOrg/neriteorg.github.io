@@ -20,9 +20,9 @@ Nerite audits:
 ## Centralization Risk
 
 ### Nerite Governance
-Nerite Protocol is designed to be as decentralized and immutable as possible. The only parameters in the protocol which can be updated or changed by Nerite governance are:
+Nerite Protocol is designed to be as limited, decentralized, and immutable as possible. The only parameters in the protocol which can be updated or changed by Nerite governance are:
 1. Debt limits for each collateral type, which can be lowered at any time but only raised by a factor of 2x with a 7 day timelock.
-2. Where to direct 25% of protocol fees. 
+2. How to direct 25% of protocol revenue. 
 
 New collateral types can NOT be added by Nerite governance. 
 USND can NEVER be minted by Nerite governance.

@@ -120,7 +120,8 @@ Borrowers should thus keep an eye on the interest rate range and the maximum upd
 
 | Entity | Collateral Assets | Delegation Info | Description |
 | ------ | ---------------- | ---------------- | ----------- |
-| Summerstone | All assets on Nerite | https://summerstone.xyz/docs/for-users/managed-interest-rates/supported-protocols/usnd-from-nerite | Nerite's first major Rate Manager partner, and infra provider. |
+| Summerstone | All assets on Nerite | https://summerstone.xyz/docs/for-users/managed-interest-rates/supported-protocols/usnd-from-nerite | Experienced infrastructure parter who provides several services for Nerite. |
+| Bolder Cash | All assets on Nerite | https://bolder.cash/rate-strategies?f=nerite&c=combined | Customizable rate manager offering various low, medium, and high rate strategies transparently. |
 |        |                  |                  |             |
 
 _Note that neither  Liquity AG nor Nerite are responsible for the actions of any delegates. Please do your own research._
