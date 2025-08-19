@@ -125,19 +125,19 @@ To open a new Trove, the protocol requires a liquidation reserve of 0.0375 ETH r
 
 ### How much will I pay for my loan?
 
-In Liquity V2, there are no upfront fees. Instead, you pay interest on an ongoing basis, making it suitable for short-term loans as well.
+On Nerite, there are no upfront fees. Instead, you pay interest on an ongoing basis, making it suitable for short-term loans as well. When creating a new position or increasing the amount borrowed, borrowers pay the first week of interest up front to prevent the protocol from leaking value to arbitrage bots.
 
 The interest you pay is determined by the rate you set yourself. For example, if you borrow 10,000 USND at a 5% interest rate, you'll pay \~500 USND in interest after one year. This interest is added to your outstanding debt.
 
 ### What are user-set rates?
 
-In Nerite *and Liquity V2*, users can set their own interest rates, giving them full control over costs and improving predictability. This feature allows for adaptability to various market conditions and helps stabilize USND's peg.
+On Nerite, users set their own interest rates, giving them full control over costs and improving predictability. This feature allows for adaptability to various market conditions and helps stabilize USND's peg.
 
 User-set interest rates facilitate a capital-efficient equilibrium between USND borrowers and holders in a fully market-driven manner. Additionally, these rates serve as the primary revenue source for USND holders, generating a continuous, sustainable real yield for USND depositors and liquidity providers.
 
 Borrowers should set their rates based on their [redemption](/docs/user-docs/redemption-and-delegation#what-are-redemptions) risk tolerance.
 
-Read more about setting your rates [here](https://www.liquity.org/blog/interest-rate-management-in-liquity-v2).
+Read more about setting your rates, or letting a Rate Manager partner set them for you for free [here](https://www.liquity.org/blog/interest-rate-management-in-liquity-v2).
 
 ### Can I adjust the rate?
 
