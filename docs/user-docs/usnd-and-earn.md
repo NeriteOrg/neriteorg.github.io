@@ -37,8 +37,11 @@ In contrast, when USND trades below $1, arbitrageurs will initiate redemptions t
 ### How can I earn yield with Nerite?
 
 * Stability Pool deposits (Earn): Earn protocol revenue by depositing USND into the various Stability Pools.
-* Protocol Incentivized Liquidity (PIL): Supply liquidity for USND onto the incentivized external DEXes. 
+* Protocol Incentivized Liquidity (PIL): Supply liquidity for USND onto the incentivized external DEXes like Bunni and Camelot. 
 * Stake NERI (coming soon): Accrue voting power over liquidity incentives by staking NERI. On top of directing revenue, NERI stakers can potentially receive bribes (subject to governance vote) from third parties as an added bonus.
+
+Users can also use "set-and-forget" strategies, like depositing USND into the Yearn managed [yUSND vault](https://app.nerite.org/earn/yusnd). This vault aggigates yield between all the  stability pools and is recommended for users looking for the simplest USND strategy. It issues the [yUSND token](https://arbiscan.io/address/0x252b965400862d94bda35fecf7ee0f204a53cc36), which is a yield bearing version of USND.
+![yUSNDvault](/img/yUSNDvault.png)
 
 ### Where does the yield for the Stability Pool deposits come from?
 

@@ -6,6 +6,12 @@ sidebar_position: 1
 
 ## Prod Deployed Contracts 
 
+### Token Contracts
+| Contract Name | Address on Arbitrum |
+|---------------|---------------------|
+| USND – $1.00 pegged Stablecoin | [0x4ecf61a6c2fab8a047ceb3b3b263b401763e9d49](https://arbiscan.io/token/0x4ecf61a6c2fab8a047ceb3b3b263b401763e9d49) |
+| yUSND – Yield Bearing USND | [0x252b965400862d94bda35fecf7ee0f204a53cc36](https://arbiscan.io/address/0x252b965400862d94bda35fecf7ee0f204a53cc36)
+
 ### Core Contracts
 
 | Contract Name | Address on Arbitrum |
